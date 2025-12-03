@@ -2,16 +2,15 @@
 
 ![Loup](ressources/loup.png)
 
-Promenons-nous dans les bois,
-Pendant que le loup n'y est pas.  
-Si le loup y était  
-Il nous mangerait,  
-Mais comme il y est pas,  
-Il nous mangera pas.  
-Loup, y es-tu ?  
-Que fais-tu ?  
-M'entends-tu ? |
-
+> *Promenons-nous dans les bois,*  
+> *Pendant que le loup n'y est pas.*  
+> *Si le loup y était*  
+> *Il nous mangerait,*  
+> *Mais comme il y est pas,*  
+> *Il nous mangera pas.*  
+> *Loup, y es-tu ?*  
+> *Que fais-tu ?*  
+> *M'entends-tu ?*
 ---
 
 ### Contexte
@@ -28,7 +27,7 @@ bois"*.
 - L'enfant doit retourner à sa position de départ (ou autre, à vous de décider) avant de se faire manger.
 - S'il ne s'est pas fait manger, il peut retourner dans la forêt et poursuivre sa cartographie.
 - La forêt est représentée par un fichier `.txt`.  
-  Les `1` sont des arbres (infranchissables par l'enfant) et les espaces `' '` des chemins praticables.
+  Les `'1'` sont des arbres (infranchissables par l'enfant) et les espaces `' '` des chemins praticables.
 
 ---
 
@@ -47,6 +46,26 @@ bois"*.
 ### Travail demandé
 
 - Un fichier au format **Mermaid (.mmd)** représentant les chemins découverts par l'enfant.
+
+```
+%% Exemple de graphe généré pour la forêt ci-dessous :
+%% 11 11
+%% 1   1
+%% 1 1 1
+%% 1   1
+%% 11111
+
+graph TD
+    1(1,3) --> 2(2,3)
+    2 --> 3(2,4)
+    3 --> 4(3,4)
+    4 --> 5(4,4)
+    2 --> 6(2,2)
+    6 --> 7(3,2)
+    7 --> 8(4,2)
+    5 --> 9(4,3)
+    8 --> 9
+```   
 
 ```mermaid
 %% Exemple de graphe généré pour la forêt ci-dessous :
